@@ -26,7 +26,7 @@ plot(datetime,as.numeric(y$Global_active_power), type="l",
 plot(datetime,(as.numeric(y$Voltage)), type="l", 
      ylab="Voltage")
 
-plot(datetime,meter1, type="l", col= "black", ylim=c(0,40), ylab="Energy sub metering",xlab="")
+plot(datetime,meter1, type="l", col= "black", ylim=c(0,38), ylab="Energy sub metering",xlab="")
 lines(datetime,meter2, type="l", col="red")
 lines(datetime,meter3, type="l", col="blue")
 names<-c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
@@ -34,5 +34,5 @@ legend('topright', names ,
        lty=1, col=c("black",'red', 'blue'),cex=1)
 
 plot(datetime,(as.numeric(y$Global_reactive_power)), type="l", 
-     ylab="Global Reactive Power")
+     ylab="Global Reactive Power", ylim=c(0,.5))
 dev.off()
